@@ -1,4 +1,4 @@
-Bitbucket Code Coverage
+#Bitbucket Code Coverage
 
 PHP command to convert and publish coverage data to BitBucket server.
 
