@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__.'/vendor/autoload.php';
+
+use Oneshoe\CloverToBitbucket\Console\Application;
+
+$application = new Application();
+
+$application->run();

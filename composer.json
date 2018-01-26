@@ -1,0 +1,27 @@
+{
+  "name": "oneshoe/clover-to-bitbucket",
+  "description": "Report clover coverage to bitbucket",
+  "minimum-stability": "dev",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Joris van Eijden",
+      "email": "joris.vaneijden@oneshoe.nl"
+    }
+  ],
+  "require": {
+    "roave/security-advisories": "dev-master",
+    "symfony/filesystem": "^4.0",
+    "symfony/console": "^4.0",
+    "nategood/httpful": "^0.2.20"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Oneshoe\\CloverToBitbucket\\": "src"
+    }
+  },
+  "bin": ["clover-to-bitbucket"]
+}

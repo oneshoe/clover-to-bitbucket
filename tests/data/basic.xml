@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1516802543">
+    <project timestamp="1516802543">
+        <file name="/var/www/html/web/modules/some.module">
+            <line num="1" type="stmt" count="0"/>
+            <line num="2" type="stmt" count="1"/>
+            <line num="3" type="stmt" count="2"/>
+            <line num="4" type="method" count="0"/>
+            <line num="5" type="method" count="1"/>
+            <line num="6" type="method" count="2"/>
+            <metrics loc="7" ncloc="6" classes="0" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="2" elements="7" coveredelements="5"/>
+        </file>
+        <package name="Oneshoe\Controller">
+            <file name="/var/www/html/web/Controller/testing.php">
+                <class name="SomeClass" namespace="Oneshoe\Controller" fullPackage="Oneshoe" package="Oneshoe">
+                    <metrics methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+                </class>
+                <line num="21" type="method" name="someMethod" crap="2" count="7"/>
+                <line num="22" type="stmt" count="0"/>
+                <line num="23" type="stmt" count="1"/>
+                <line num="24" type="stmt" count="2"/>
+                <metrics loc="28" ncloc="17" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+            </file>
+        </package>
+    </project>
+</coverage>
