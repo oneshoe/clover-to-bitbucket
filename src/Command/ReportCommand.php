@@ -77,20 +77,23 @@ class ReportCommand extends Command
         if (!is_readable($coverageFile)) {
             throw new \RuntimeException(sprintf('The file %s does not exist', $coverageFile));
         }
+        $contents = trim(file_get_contents($coverageFile));
+        if (empty($contents)) {
+            throw new \RuntimeException(sprintf('The file %s is empty', $coverageFile));
+        }
 
-        $cloverXml = new \SimpleXMLElement(file_get_contents($coverageFile));
-
+        $cloverXml = new \SimpleXMLElement($contents);
         $result = Converter::cloverToBitbucket($cloverXml, $baseDir);
+        $json = json_encode($result);
 
+        // First delete any previous data from bitbucket.
         $deleted = Request::delete($url)
             ->expects('text')
             ->authenticateWith($username, $password)
             ->send();
-
         $output->writeln($deleted->body);
 
-        $json = json_encode($result);
-
+        // Then post the new results.
         Request::post($url)
             ->sends('json')
             ->authenticateWith($username, $password)
