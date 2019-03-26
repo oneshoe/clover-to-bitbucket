@@ -10,8 +10,8 @@
     }
   ],
   "require": {
-    "symfony/filesystem": "^3.4",
-    "symfony/console": "^3.4",
+    "symfony/filesystem": ">=3.2 <5.0",
+    "symfony/console": ">=3.2 <5.0",
     "nategood/httpful": "^0.2.20",
     "ext-simplexml": "*",
     "ext-json": "*"
